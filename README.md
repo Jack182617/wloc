@@ -122,6 +122,39 @@ https://raw.githubusercontent.com/Yu9191/wloc/refs/heads/main/modules/wloc.lpx
 </details>
 
 <details>
+<summary><b>自部署 Worker（推荐）</b></summary>
+
+公共选点页面 `https://wloc-spoofer.wloc.workers.dev/` 有请求上限，建议部署自己的 Worker 实例。
+
+**一键部署：**
+
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/Yu9191/wloc/tree/main/worker)
+
+**手动部署：**
+
+```bash
+# 1. 克隆仓库
+git clone https://github.com/Yu9191/wloc.git
+cd wloc/worker
+
+# 2. 安装依赖
+npm install
+
+# 3. 登录 Cloudflare（首次需要）
+npx wrangler login
+
+# 4. 部署（二选一）
+npm run pages:deploy    # Cloudflare Pages 方式
+npm run workers:deploy  # Cloudflare Workers 方式
+```
+
+部署成功后会得到你自己的 Worker 地址（如 `https://wloc-spoofer.<你的子域名>.workers.dev`），用这个地址选点即可。
+
+> 免费账户每天 10 万次请求，个人使用完全够用。
+
+</details>
+
+<details>
 <summary><b>注意事项</b></summary>
 
 - 需要 MITM 证书信任 `gs-loc.apple.com` 和 `gs-loc-cn.apple.com`
