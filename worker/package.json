@@ -8,5 +8,8 @@
   },
   "dependencies": {
     "hono": "^4.10.6"
+  },
+  "devDependencies": {
+    "wrangler": "4.110.0"
   }
 }
