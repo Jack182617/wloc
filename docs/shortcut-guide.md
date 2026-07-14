@@ -17,6 +17,11 @@
 
 ## 使用方法
 
+个人版快捷指令：
+
+- 设置位置：`https://raw.githubusercontent.com/Jack182617/wloc/main/shortcuts/wloc-set-personal.shortcut`
+- 清除恢复：`https://raw.githubusercontent.com/Jack182617/wloc/main/shortcuts/wloc-clear-personal.shortcut`
+
 ### 1. 安装模块（一次性）
 订阅对应平台的模块并启用 MITM。
 

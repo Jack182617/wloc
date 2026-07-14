@@ -38,6 +38,13 @@ https://wloc-jack182617.yuanjie182617.workers.dev/
 
 上游的 iCloud 快捷指令属于 Apple 分享资源，不由本 fork 托管；如果继续使用，需要在快捷指令中把 Worker 地址改为上面的个人地址。
 
+本 fork 已提供个人版快捷指令：
+
+- [WLOC 设置位置（地图分享后使用）](https://raw.githubusercontent.com/Jack182617/wloc/main/shortcuts/wloc-set-personal.shortcut)
+- [WLOC 清除恢复真实定位](https://raw.githubusercontent.com/Jack182617/wloc/main/shortcuts/wloc-clear-personal.shortcut)
+
+安装后，在 Apple 地图或高德地图中选择位置 → 分享 → 运行「WLOC 设置位置」即可；恢复真实定位时直接运行「WLOC 清除恢复真实定位」。
+
 **用法**
 
 - **设置位置：** 在地图 App 里选好位置（长按地图选点）→ 共享 → 选「wloc 设置地理位置」即可切换。
