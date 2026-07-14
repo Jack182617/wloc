@@ -30,12 +30,13 @@ https://raw.githubusercontent.com/Jack182617/wloc/refs/heads/main/modules/wloc.m
 
 ---
 
-## 快捷指令（推荐，最方便）
+## 使用入口
 
-直接用快捷指令切换 / 清除定位，无需打开选点页面：
+长期使用建议直接打开个人 Worker 选点页面：
 
-- **wloc 设置地理位置**：https://www.icloud.com/shortcuts/a82717d8fdad4e6280866fcf911173f7
-- **wloc 清理恢复位置**：https://www.icloud.com/shortcuts/f42632d406504f24a2cd163af4fe012f
+https://wloc-jack182617.yuanjie182617.workers.dev/
+
+上游的 iCloud 快捷指令属于 Apple 分享资源，不由本 fork 托管；如果继续使用，需要在快捷指令中把 Worker 地址改为上面的个人地址。
 
 **用法**
 
@@ -52,7 +53,7 @@ https://raw.githubusercontent.com/Jack182617/wloc/refs/heads/main/modules/wloc.m
 
 ### 关于地图链接解析（worker）
 
-为了让苹果地图和高德走同一条流程，链接统一发给 `wloc-spoofer.wloc.workers.dev/api/parse` 解析：
+为了让苹果地图和高德走同一条流程，链接统一发给 `wloc-jack182617.yuanjie182617.workers.dev/api/parse` 解析：
 
 - **高德**：分享出来是短链，真实坐标只藏在 302 跳转的 `Location` 头里，且是 GCJ-02 偏移坐标。快捷指令既读不到跳转头、也难做坐标换算，所以由 worker 跟跳转 → 抠坐标 → GCJ-02→WGS84 → 返回经纬度。
 - **苹果地图**：链接里直接带 `coordinate=纬度,经度`，但在**中国大陆同样是 GCJ-02 偏移坐标**，所以和高德一样由 worker 做 GCJ-02→WGS84 换算后返回；境外坐标会自动跳过换算（`out_of_china` 判断）原样返回。除了统一坐标系，走同一接口也方便统一处理短链、文本夹链接、名称解码等。
@@ -62,7 +63,7 @@ https://raw.githubusercontent.com/Jack182617/wloc/refs/heads/main/modules/wloc.m
 **不放心可自行部署：** worker 源码完全开源，可自己部署一份替换上面的地址：
 
 - 解析逻辑：[`worker/src/parse.js`](worker/src/parse.js)，路由：[`worker/src/index.js`](worker/src/index.js)
-- 部署后把快捷指令里的 `wloc-spoofer.wloc.workers.dev` 换成你自己的 worker 域名即可。
+- 当前个人 Worker：`https://wloc-jack182617.yuanjie182617.workers.dev/`
 
 ---
 
@@ -175,8 +176,8 @@ https://raw.githubusercontent.com/Jack182617/wloc/refs/heads/main/modules/wloc.m
 
 公共选点页面有请求上限，建议部署自己的实例：
 
-- **Workers**: `https://wloc-spoofer.wloc.workers.dev/`
-- **Pages**: `https://wloc-pages.pages.dev/`
+- **Workers**: `https://wloc-jack182617.yuanjie182617.workers.dev/`
+- **Pages**: 未部署；Workers 版本已包含完整功能
 
 **一键部署（Workers）：**
 

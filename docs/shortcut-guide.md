@@ -23,7 +23,7 @@
 ### 2. 打开选点页面
 在 Safari 中打开公共选点页面（建议添加到主屏幕）:
 ```
-https://你的worker域名/
+https://wloc-jack182617.yuanjie182617.workers.dev/
 ```
 
 > Worker 是纯静态页面，不存储任何数据。坐标直接写入你的设备本地。

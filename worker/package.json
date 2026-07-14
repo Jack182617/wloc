@@ -10,6 +10,7 @@
     "hono": "^4.10.6"
   },
   "devDependencies": {
+    "@cloudflare/workerd-darwin-arm64": "^1.20260708.1",
     "wrangler": "4.110.0"
   }
 }
